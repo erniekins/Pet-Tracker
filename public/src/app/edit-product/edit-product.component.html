@@ -1,0 +1,11 @@
+<h2>Update Product</h2>
+
+<p *ngIf='createErrors'>Here is everything wrong with what you just did: {{createErrors|json}}</p>
+
+<form (submit)="editOneProduct()">
+	<p>Name: <input type="text" name="editProduct.name" [(ngModel)]="editProduct.name"></p>
+	<p>Quantity: <input type="text" name="editProduct.qty" [(ngModel)]="editProduct.qty"></p>
+	<p>Price: <input type="text" name="editProduct.price" [(ngModel)]="editProduct.price"></p>
+	<button type='submit'>Update</button>
+	<button [routerLink]=''>Reset</button>
+</form>

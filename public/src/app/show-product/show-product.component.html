@@ -1,0 +1,11 @@
+<h2>Product Details</h2>
+<p *ngIf='QuantityError > 0'>{{'Can only delete when quantity reaches 0'}}</p>
+
+<p>Name: {{ product.name }}</p>
+
+<p>Quantity: {{ product.qty }}</p>
+
+<p>Price: $ {{ product.price }}</p>
+
+<button [routerLink]="['/products']">Back</button>
+<button (click)='deleteProduct(this.product._id)'>Delete</button>

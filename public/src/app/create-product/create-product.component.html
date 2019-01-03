@@ -1,0 +1,11 @@
+<h2>Add a new Product!</h2>
+
+<p *ngIf='validErrors'>Here is everything wrong with what you just did: {{validErrors|json}}</p>
+
+<form (submit)="createProduct()">
+	<p>Name: <input type="text" name="newProduct.name" [(ngModel)]="newProduct.name"></p>
+	<p>Quantity: <input type="text" name="newProduct.qty" [(ngModel)]="newProduct.qty"></p>
+	<p>Price: <input type="text" name="newProduct.price" [(ngModel)]="newProduct.price"></p>
+	<button type='submit'>Create</button>
+	<button [routerLink]='["/products"]'>Cancel</button>
+</form>
